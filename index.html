@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Calculator</title>
+    <!--Import CSS File-->
+    <link rel="stylesheet" href="Calculator_Style.css?v=3">
+</head>
+
+<body>
+    <div class="calculator">
+
+        <!--header/Navigation/Advance Functionlites-->
+        <div class="tabs">
+            <button onclick="showTab('basic')">Basic</button>
+            <button onclick="showTab('currency')">Currency</button>
+            <button onclick="showTab('unit')">Unit</button>
+            <button onclick="showTab('bmi')">BMI</button>
+            <button onclick="showTab('tip')">Tip</button>
+            <button onclick="showTab('age')">Age</button>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <!-- Basic Calculator -->
+
+        <div class="tab-content" id="basic">
+            <!-- <input type="text" placeholder="0000" id="display" disabled> The display input has the "disabled" attribute, which prevents JavaScript from modifying its value.For that we are use readonly attribute. -->
+            <input type="text" placeholder="0000" id="display" readonly>
+            <hr>
+            <hr>
+            <hr>
+
+            <div class="buttons">
+                <button onclick="append('1')">1</button>
+                <button onclick="append('2')">2</button>
+                <button onclick="append('3')">3</button>
+                <button onclick="append('+')">+</button>
+                <button onclick="append('4')">4</button>
+                <button onclick="append('5')">5</button>
+                <button onclick="append('6')">6</button>
+                <button onclick="append('-')">-</button>
+                <button onclick="append('7')">7</button>
+                <button onclick="append('8')">8</button>
+                <button onclick="append('9')">9</button>
+                <button onclick="append('*')">*</button>
+                <button onclick="append('0')">0</button>
+                <button onclick="append('.')">.</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="append('/')">/</button>
+                <button onclick="append('%')">%</button>
+                <button onclick="cleardigit()">X</button>
+                <button onclick="squareroot()">√</button>
+                <button onclick="calculate()">=</button>
+                <!--Add other Functionalites-->
+
+            </div>
+
+        </div>
+        <!-- Logic Second of Currency Convert. -->
+        <!-- Currency Converter -->
+        <div class="tab-content" id="currency">
+            <!--In This Field we are Enter our Currency.-->
+            <input type="number" id="amount" placeholder="Enter amount">
+            <select id="conversion-type">
+                <option value="inrTousd">INR → USD</option>
+                <option value="usdToinr">USD → INR</option>
+                <option value="eurToinr">EUR → INR</option>
+                <option value="inrToeur">INR → EUR</option>
+                <option value="inrTojpy">INR → JPY</option>
+                <option value="jpyToinr">JPY → INR</option>
+                <option value="inrToaud">INR → AUD</option>
+                <option value="audToinr">AUD → INR</option>
+                <option value="inrTogbp">INR → GBP</option>
+                <option value="gbpToinr">GBP → INR</option>
+            </select>
+            <button onclick="convertCurrency()">Convert</button>
+            <p id="currency-result"></p>
+        </div>
+        <!--Same Logic are working here!-->
+        <!-- Unit Converter -->
+        <div class="tab-content" id="unit">
+            <!--In This Field we are Enter our Value.-->
+            <input type="number" id="unitValue" placeholder="Value">
+            <select id="unitType">
+                <option value="cmToM">cm → m</option>
+                <option value="mToCm">m → cm</option>
+                <option value="kgToLb">kg → lb</option>
+                <option value="lbToKg">lb → kg</option>
+                <option value="kgTogm">Kg → gm</option>
+                <option value="gmToKg">gm → kg</option>
+            </select>
+            <button onclick="convertUnit()">Convert</button>
+            <p id="unit-result"></p>
+        </div>
+
+        <!-- BMI Calculator -->
+        <div class="tab-content" id="bmi">
+            <!--In These Fields we are Enter our weight(kg) and Height(cm).-->
+            <input type="number" id="weight" placeholder="Weight (kg)">
+            <input type="number" id="height" placeholder="Height (cm)">
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <p id="bmi-result"></p>
+        </div>
+
+        <!-- Tip Calculator -->
+        <div class="tab-content" id="tip">
+            <!--In This Field we are Enter our Amount.-->
+            <input type="number" id="bill" placeholder="Bill Amount">
+            <input type="number" id="tipPercent" placeholder="Tip %">
+            <button onclick="calculateTip()">Calculate Tip</button>
+            <p id="tip-result"></p>
+        </div>
+
+        <!-- Age Calculator -->
+        <div class="tab-content" id="age">
+            <!--In This Field we are Enter our Age.-->
+            <input type="date" id="dob" placeholder="Select your date of birth">
+            <button onclick="calculateAge()">Calculate Age</button>
+            <p id="age-result"></p>
+        </div>
+
+    </div>
+
+    <!--Attached Java Script File-->
+    <script src="Calculator.js?v=2"></script>
+    <!-- <script src="script.js?v=2"></script> -->
+</body>
+
+</html>

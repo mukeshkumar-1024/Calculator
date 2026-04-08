@@ -1,0 +1,480 @@
+/* Calculator_Style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif; */
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calculator {
+  background: #000;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 15px 20px 50px rgb(13, 13, 13);
+  border: 2px solid #333;
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.tabs button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 55px;
+}
+
+.tabs button:hover {
+  background: #727272;
+  color: #53fe3c;
+}
+
+.tabs button:active {
+  transform: scale(0.98);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Real Calculator Display Styling */
+#display {
+  width: 100%;
+  height: 100px;
+  background: #c7c1c1;
+  color: #080707;
+  border: 2px solid #333;
+  border-radius: 15px;
+  text-align: right;
+  font-size: 56px;
+  font-weight: 600;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  outline: none;
+  font-family: "SF Mono", Monaco, "Courier New", monospace;
+  box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Basic Calculator Buttons - CIRCULAR */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buttons button {
+  width: 140px !important;
+  height: 80px !important;
+  border: none;
+  border-radius: 30% !important; /* Perfect circle */
+  font-size: 28px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Number buttons - Light Gray */
+.buttons button:nth-child(1),  /* 1 */
+.buttons button:nth-child(2),  /* 2 */
+.buttons button:nth-child(3),  /* 3 */
+.buttons button:nth-child(5),  /* 4 */
+.buttons button:nth-child(6),  /* 5 */
+.buttons button:nth-child(7),  /* 6 */
+.buttons button:nth-child(9),  /* 7 */
+.buttons button:nth-child(10), /* 8 */
+.buttons button:nth-child(11), /* 9 */
+.buttons button:nth-child(13), /* 0 */
+.buttons button:nth-child(14) {
+  /* . */
+  background: #2f2f2f;
+  color: #fff;
+}
+
+.buttons button:nth-child(1):hover,
+.buttons button:nth-child(2):hover,
+.buttons button:nth-child(3):hover,
+.buttons button:nth-child(5):hover,
+.buttons button:nth-child(6):hover,
+.buttons button:nth-child(7):hover,
+.buttons button:nth-child(9):hover,
+.buttons button:nth-child(10):hover,
+.buttons button:nth-child(11):hover,
+.buttons button:nth-child(13):hover,
+.buttons button:nth-child(14):hover
+/* .buttons button:nth-child(17):hover,
+.buttons button:nth-child(18):hover,
+.buttons button:nth-child(19):hover */ {
+  background: #717171;
+}
+
+.buttons button:nth-child(1):active,
+.buttons button:nth-child(2):active,
+.buttons button:nth-child(3):active,
+.buttons button:nth-child(5):active,
+.buttons button:nth-child(6):active,
+.buttons button:nth-child(7):active,
+.buttons button:nth-child(9):active,
+.buttons button:nth-child(10):active,
+.buttons button:nth-child(11):active,
+.buttons button:nth-child(13):active,
+.buttons button:nth-child(14):active {
+  background: #ffffff;
+}
+
+/* Operator buttons - Orange */
+.buttons button:nth-child(4),  /* + */
+.buttons button:nth-child(8),  /* - */
+.buttons button:nth-child(12), /* * */
+.buttons button:nth-child(16), /* / */
+.buttons button:nth-child(17), /* % */
+.buttons button:nth-child(18), /* x */
+.buttons button:nth-child(19), /* √ */
+.buttons button:nth-child(20) /* clear Funcation */ {
+  /* = */
+  background: #ff9500;
+  color: #fff;
+}
+
+.buttons button:nth-child(4):hover,
+.buttons button:nth-child(8):hover,
+.buttons button:nth-child(12):hover,
+.buttons button:nth-child(16):hover,
+.buttons button:nth-child(17):hover,
+.buttons button:nth-child(18):hover,
+.buttons button:nth-child(19):hover,
+.buttons button:nth-child(20):hover {
+  background: #ff9500;
+}
+
+.buttons button:nth-child(4):active,
+.buttons button:nth-child(8):active,
+.buttons button:nth-child(12):active,
+.buttons button:nth-child(16):active,
+.buttons button:nth-child(17):active,
+.buttons button:nth-child(18):active,
+.buttons button:nth-child(19):active,
+.buttons button:nth-child(20):active {
+  background: #ff6600;
+}
+
+/* Clear button - Light Gray */
+.buttons button:nth-child(15) {
+  /* C */
+  background: #dbdbdb;
+  color: #000;
+}
+
+.buttons button:nth-child(15):hover {
+  background: #e57676;
+}
+
+.buttons button:nth-child(15):active {
+  background: #ed2b2b;
+}
+
+/* Other Calculator Forms Styling */
+.tab-content input,
+.tab-content select {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: #333;
+  border: 2px solid #444;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.tab-content input::placeholder {
+  color: #717171;
+}
+
+.tab-content select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'><path fill='%23fff' d='M2 0L0 2h4zm0 5L0 3h4z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+}
+
+.tab-content button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: #ffa426;
+  border: 1px ridge white;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-content button:hover {
+  background: #45b843;
+  color: black;
+}
+
+.tab-content button:active {
+  transform: scale(0.98);
+}
+
+.tab-content p {
+  color: #2a2ade;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 18px;
+  min-height: 25px;
+  background: #c9c9c9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #444;
+}
+
+/* Date input specific styling */
+input[type="date"] {
+  color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Button press animation */
+.buttons button:active,
+.tab-content button:active {
+  transform: scale(0.92);
+}
+
+/* Focus states for accessibility */
+button:focus,
+input:focus,
+select:focus {
+  outline: 2px solid #ff9500;
+  outline-offset: 2px;
+}
+
+/* Glow effect for active display */
+#display:focus {
+  border-color: #ff9500;
+  box-shadow: 0 0 10px rgba(255, 149, 0, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets and Small Laptops */
+@media (max-width: 1024px) {
+  .calculator {
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  .buttons button {
+    width: 120px !important;
+    height: 70px !important;
+    font-size: 24px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .calculator {
+    max-width: 500px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  #display {
+    height: 90px;
+    font-size: 48px;
+    padding: 0 15px;
+  }
+
+  .buttons button {
+    width: 100px !important;
+    height: 60px !important;
+    font-size: 22px;
+  }
+
+  .tabs button {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+/* Large Mobile Phones */
+@media (max-width: 600px) {
+  .calculator {
+    max-width: 400px;
+    padding: 15px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+
+  #display {
+    height: 80px;
+    font-size: 40px;
+    padding: 0 12px;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .buttons button {
+    width: 80px !important;
+    height: 50px !important;
+    font-size: 20px;
+  }
+
+  .tabs {
+    gap: 10px;
+  }
+
+  .tabs button {
+    font-size: 12px;
+    padding: 4px 6px;
+    min-width: 45px;
+  }
+
+  .tab-content input,
+  .tab-content select,
+  .tab-content button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .calculator {
+    max-width: 320px;
+    padding: 12px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  #display {
+    height: 70px;
+    font-size: 32px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .buttons button {
+    width: 65px !important;
+    height: 45px !important;
+    font-size: 18px;
+  }
+
+  .tabs {
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .tabs button {
+    font-size: 10px;
+    padding: 3px 5px;
+    min-width: 40px;
+    border-radius: 8px;
+  }
+
+  .tab-content input,
+  .tab-content select,
+  .tab-content button {
+    padding: 10px;
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .tab-content p {
+    font-size: 16px;
+    padding: 8px;
+    margin: 12px 0;
+  }
+}
+
+/* Extra Small Mobile Phones */
+@media (max-width: 360px) {
+  .calculator {
+    max-width: 280px;
+  }
+
+  .buttons button {
+    width: 55px !important;
+    height: 40px !important;
+    font-size: 16px;
+  }
+
+  #display {
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .tabs button {
+    font-size: 9px;
+    padding: 2px 4px;
+  }
+}
