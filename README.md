@@ -10,8 +10,7 @@ A calculator built with plain HTML, CSS and JavaScript — no framework, no buil
 
 ## Screenshot
 
-<!-- Take a screenshot, save it as docs/screenshot.png, then uncomment: -->
-<!-- ![Calculator](docs/screenshot.png) -->
+![Calculator](docs/screenshot.png)
 
 ## What it does
 
