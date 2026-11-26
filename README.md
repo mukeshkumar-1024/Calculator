@@ -2,7 +2,9 @@
 
 A calculator built with plain HTML, CSS and JavaScript — no framework, no build step. Open the file and it runs.
 
-**Live demo:** _(enable GitHub Pages on this repo and put the link here)_
+**Live demo:** https://calculator-bf9n.onrender.com
+
+> Hosted on Render's free tier, which sleeps when idle — the first load can take up to a minute. After that it is quick.
 
 ---
 
@@ -13,12 +15,18 @@ A calculator built with plain HTML, CSS and JavaScript — no framework, no buil
 
 ## What it does
 
-- The four basic operations, with a running display
-- Keyboard support alongside clicking
-- Clear and delete, so a mistyped digit does not mean starting over
-- Responsive layout that holds up on a phone
+More than a plain calculator — six tools behind a tabbed interface:
 
-Around 170 lines of JavaScript and 480 of CSS — most of the work is in the styling and in handling input edge cases.
+| Tab | What it does |
+| --- | --- |
+| **Basic** | The four arithmetic operations with a running display |
+| **Currency** | Convert between currencies |
+| **Unit** | Unit conversions |
+| **BMI** | Body mass index from height and weight |
+| **Tip** | Split a bill and work out the tip |
+| **Age** | Age from a date of birth |
+
+Around 170 lines of JavaScript and 480 of CSS — no framework, no build step.
 
 ## Run it
 
@@ -30,16 +38,6 @@ cd Calculator
 open index.html        # or just double-click the file
 ```
 
-## Publish it
-
-This is a static site, so GitHub Pages hosts it free:
-
-1. Repo → **Settings** → **Pages**
-2. Under **Source**, pick **Deploy from a branch**
-3. Branch **main**, folder **/ (root)**, then **Save**
-4. A minute later it is live at `https://mukeshkumar-1024.github.io/Calculator/`
-
-Put that link at the top of this README and in the repo's **About** box.
 
 ## License
 
